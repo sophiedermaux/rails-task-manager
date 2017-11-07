@@ -1,0 +1,11 @@
+ <!-- shows only one task -->
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+
+<% if @task.completed == true %>
+  <p> Completed </p>
+<% end %>
+
+<%= link_to "Home-page", tasks_path %>
+<%= link_to "Edit task", edit_task_path(params[:id]) %>
+

@@ -1,0 +1,20 @@
+<!-- edit the task  -->
+<!-- <label for="title">Edited Task: </label>
+<input type="text" name="task[title]" id="title"
+       value="edit your task!">
+  <input type="submit"> -->
+
+  <%= form_for(@task) do |t| %>
+    <%= t.label :title %>
+    <%= t.text_field :title %>
+
+    <%= t.label :details %>
+    <%=t.text_field :details %>
+
+    <%=t.check_box :completed %>
+
+    <%= t.submit %>
+  <% end %>
+
+
+
